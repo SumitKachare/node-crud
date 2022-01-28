@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "791a3cc8-4693-4c45-8d79-eebd5318a759",
+		"name": "Product Assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Variants",
+			"item": [
+				{
+					"name": "Create Variant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"product_id\": \"61f41175ac02f985678b7f99\",\r\n        \"title\": \"Pink\",\r\n        \"price\": \"199.00\",\r\n        \"sku\": \"IPOD2008PINK\",\r\n        \"position\": 1,\r\n        \"inventory_policy\": \"continue\",\r\n        \"compare_at_price\": null,\r\n        \"fulfillment_service\": \"manual\",\r\n        \"inventory_management\": \"shopify\",\r\n        \"option1\": \"Pink\",\r\n        \"created_at\": \"2021-10-01T16:42:46-04:00\",\r\n        \"updated_at\": \"2021-10-01T16:42:46-04:00\",\r\n        \"taxable\": true,\r\n        \"barcode\": \"1234_pink\",\r\n        \"grams\": 567,\r\n        \"image_id\": \"61f41ce68466f0ff1997732c\",\r\n        \"weight\": 1.25,\r\n        \"weight_unit\": \"lb\",\r\n        \"inventory_item_id\": 808950810,\r\n        \"inventory_quantity\": 10,\r\n        \"old_inventory_quantity\": 10,\r\n        \"presentment_prices\": [\r\n          {\r\n            \"price\": {\r\n              \"amount\": \"199.00\",\r\n              \"currency_code\": \"USD\"\r\n            },\r\n            \"compare_at_price\": null\r\n          }\r\n        ],\r\n        \"requires_shipping\": true,\r\n        \"admin_graphql_api_id\": \"gid://shopify/ProductVariant/808950810\"\r\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/variant/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"variant",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Variants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/variant/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"variant",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Variants",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"weight\": 5.00,\r\n    \"id\" : \"61f4294061b35acf717d8c60\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/variant/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"variant",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Variants",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"61f4294061b35acf717d8cc0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/variant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"variant"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "Create Images",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \r\n        \"product_id\": \"61f41175ac02f985678b7f99\",\r\n        \"position\": 1,\r\n        \"alt\": null,\r\n        \"width\": 123,\r\n        \"height\": 456,\r\n        \"src\": \"https://cdn.shopify.com/s/files/1/0006/9093/3842/products/ipod-nano.png?v=1633120966\",\r\n        \"variant_ids\": [],\r\n        \"admin_graphql_api_id\": \"gid://shopify/ProductImage/850703190\"\r\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/images/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"images",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Images",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/images/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"images",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Images",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"61f42d1f5251489afb034847\",\r\n    \"width\": 1000\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/images/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"images",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Images",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"61f433d7033aa733b87df4fc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"images"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"IPod Nano - 8GB\",\r\n\"body_html\" : \"<p>It's the small iPod with one very big idea: Video. Now the world's most popular music player, available in 4GB and 8GB models, lets you enjoy TV shows, movies, video podcasts, and more. The larger, brighter display means amazing picture quality. In six eye-catching colors, iPod nano is stunning all around. And with models starting at just $149, little speaks volumes.</p>\",\r\n\"vendor\" : \"Apple\",\r\n\"product_type\" : \"Cult Products\",\r\n\"handle\" : \"ipod-nano\",\r\n\"published_at\" : \"2022-1-28\",\r\n\"status\" : \"inactive\",\r\n\"published_scope\" : \"web\",\r\n\"tags\"  : \"Emotive, Flash Memory, MP3, Music\",\r\n\"admin_graphql_api_id\" : \"gid://shopify/Product/632910392\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/product/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "150",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"options\": [\"61f422336d22978c5c914e7b\"],\r\n        \"images\": [\"61f42d1f52c1489afb032847\"],\r\n        \"id\": \"61f41175ac02f985678b7f99\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/product/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Products",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"61f411549a38ba67b3a576df\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/product/:productId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Options",
+			"item": [
+				{
+					"name": "Create Option",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"product_id\": \"61f41175ac02f985678b7f99\",\r\n        \"name\": \"Color\",\r\n        \"position\": 1,\r\n        \"values\": [\r\n          \"Pink\",\r\n          \"Red\",\r\n          \"Green\",\r\n          \"Black\"\r\n        ]\r\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/options/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"options",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Options",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/options/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"options",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Options",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"product_id\": \"61f41175ac02f985678b7f99\",\r\n        \"name\": \"Color\",\r\n        \"position\": 1,\r\n        \"values\": [\r\n            \"Pink\",\r\n            \"Red\"\r\n        ],\r\n        \"id\": \"61f422336d22978c5c914e8b\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/options/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"options",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Options",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"61f4343b033aa733b87df500\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/options",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"options"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
